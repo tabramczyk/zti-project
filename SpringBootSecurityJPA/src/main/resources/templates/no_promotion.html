@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+   <head>
+      <title>Game</title>
+   </head>
+   <body>
+      <!-- Include _menu.html -->
+      <th:block th:include="/_menu"></th:block>
+       
+       
+      <h2>Life Simulator</h2>
+      You need at least <span th:utext="${required_intelligence}"></span> intelligence for promotion.<br/><br/>
+      <a th:href="@{/game}">Back to game.</a>
+   </body>
+    
+</html>

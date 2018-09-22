@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassDiagram>
+    <Class name="org.o7planning.sbsecurity.entity.UserRole" x="633" y="514">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association
+            destinationClassName="org.o7planning.sbsecurity.entity.AppUser"
+            endpointName="appUser" kind="Simple"/>
+        <Association
+            destinationClassName="org.o7planning.sbsecurity.entity.AppRole"
+            endpointName="appRole" kind="Simple"/>
+    </Class>
+    <Class name="org.o7planning.sbsecurity.utils.EncrytedPasswordUtils"
+        x="499" y="606">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="org.o7planning.sbsecurity.controller.MainController"
+        x="52" y="65">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association
+            destinationClassName="org.o7planning.sbsecurity.entity.AppUser"
+            endpointName="appUser" kind="Simple"/>
+        <Association
+            destinationClassName="org.o7planning.sbsecurity.dao.AppUserDAO"
+            endpointName="appUserDAO" kind="Simple"/>
+        <Communication destinationClassName="org.o7planning.sbsecurity.dao.AppUserDAO"/>
+        <Communication destinationClassName="org.o7planning.sbsecurity.utils.WebUtils"/>
+        <Communication destinationClassName="org.o7planning.sbsecurity.entity.AppUser"/>
+    </Class>
+    <Class name="org.o7planning.sbsecurity.config.WebSecurityConfig"
+        x="394" y="34">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association
+            destinationClassName="org.o7planning.sbsecurity.service.UserDetailsServiceImpl"
+            endpointName="userDetailsService" kind="Simple"/>
+    </Class>
+    <Class name="org.o7planning.sbsecurity.dao.AppUserDAO" x="387" y="397">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Communication destinationClassName="org.o7planning.sbsecurity.entity.AppUser"/>
+    </Class>
+    <Class name="org.o7planning.sbsecurity.utils.WebUtils" x="338" y="603">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="org.o7planning.sbsecurity.entity.AppUser" x="90" y="444">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class
+        name="org.o7planning.sbsecurity.SpringBootSecurityJpaApplication"
+        x="104" y="7">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="org.o7planning.sbsecurity.dao.AppRoleDAO" x="405" y="281">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="org.o7planning.sbsecurity.entity.AppRole" x="727" y="361">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class
+        name="org.o7planning.sbsecurity.service.UserDetailsServiceImpl"
+        x="753" y="215">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association
+            destinationClassName="org.o7planning.sbsecurity.dao.AppRoleDAO"
+            endpointName="appRoleDAO" kind="Simple"/>
+        <Association
+            destinationClassName="org.o7planning.sbsecurity.dao.AppUserDAO"
+            endpointName="appUserDAO" kind="Simple"/>
+        <Communication destinationClassName="org.o7planning.sbsecurity.dao.AppUserDAO"/>
+        <Communication destinationClassName="org.o7planning.sbsecurity.entity.AppUser"/>
+        <Communication destinationClassName="org.o7planning.sbsecurity.dao.AppRoleDAO"/>
+    </Class>
+</ClassDiagram>

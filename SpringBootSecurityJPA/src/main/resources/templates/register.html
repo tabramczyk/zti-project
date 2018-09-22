@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+   <head>
+      <title>Register</title>
+   </head>
+   <body>
+      <!-- Include _menu.html -->
+      <th:block th:include="/_menu"></th:block>
+       
+      <h1>Register</h1>
+       <form method="POST"
+          action="/register/submit" th:object="${appUser}">
+          <table>
+          <tr><td>Login</td><td><input th:field="*{userName}"/></td></tr>
+          <tr><td>Password</td><td><input type="password" th:field="*{encrytedPassword}"/></td></tr>
+          <tr><td colspan="2"><input type="submit" value="Register"/></td></tr>
+          </table>
+          </form>
+      
+   </body>
+    
+</html>

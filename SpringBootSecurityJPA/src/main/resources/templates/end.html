@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+   <head>
+      <title>Game</title>
+   </head>
+   <body>
+      <!-- Include _menu.html -->
+      <th:block th:include="/_menu"></th:block>
+       
+       
+      <h2>Congratulations!</h2>
+      You've earn <span th:utext="${money}"></span>!<br/><br/>
+      We hope you're really happy with your life.<br/>
+      </br>
+      <a th:href="@{/reset}">Reset game and try life better.</a>
+   </body>
+    
+</html>

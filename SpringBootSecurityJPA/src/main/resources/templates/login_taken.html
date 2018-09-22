@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+   <head>
+      <title>Game</title>
+   </head>
+   <body>
+      <!-- Include _menu.html -->
+      <th:block th:include="/_menu"></th:block>
+       
+       
+      <h2>Error</h2>
+      This login is already taken.<br/><br/>
+      <a th:href="@{/register}">Back to register.</a>
+   </body>
+    
+</html>

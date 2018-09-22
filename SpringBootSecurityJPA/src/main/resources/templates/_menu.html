@@ -1,0 +1,27 @@
+<div xmlns:th="http://www.thymeleaf.org"
+     style="border: 1px solid #ccc;padding:5px;margin-bottom:20px;">
+  <a th:href="@{/}">Home</a>
+     | &nbsp;
+   <a th:href="@{/game}">Game</a>
+   
+   <span th:if="${#request.userPrincipal == null}">
+     | &nbsp; 
+   <a th:href="@{/register}">Register</a>
+   </span>
+   
+   <span th:if="${#request.userPrincipal != null}">
+     | &nbsp; 
+   <a th:href="@{/logout}">Logout</a>
+   
+  	| &nbsp;
+  	Year: <span th:utext="${year}"></span>
+  	| &nbsp;
+  	Money: <span th:utext="${money}"></span>
+  	| &nbsp;
+  	Intelligence: <span th:utext="${intelligence}"></span>
+  	| &nbsp;
+    Happiness: <span th:utext="${happiness}"></span>
+    | &nbsp;
+    Work level: <span th:utext="${work_level}"></span>
+  	</span>
+</div>

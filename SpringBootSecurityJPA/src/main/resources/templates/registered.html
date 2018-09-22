@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+   <head>
+      <title>Registered</title>
+   </head>
+   <body>
+      <!-- Include _menu.html -->
+      <th:block th:include="/_menu"></th:block>
+       
+       
+      <h2>Your account has been created</h2>
+      You can login to game.<br/><br/>
+      <a th:href="@{/game}">Login</a>
+   </body>
+    
+</html>
